@@ -11,11 +11,11 @@ type Handler struct {
 	Router *mux.Router
 }
 
-func newHandler() *Handler {
+func NewHandler() *Handler {
 	return &Handler{}
 }
 
-func (h *Handler) setUpRoutes() {
+func (h *Handler) SetUpRoutes() {
 	fmt.Println("Setting Up routes")
 	h.Router = mux.NewRouter()
 	h.Router.HandleFunc("/api/health", func(w http.ResponseWriter *http.Request) {
